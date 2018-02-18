@@ -1,0 +1,19 @@
+body {
+     margin: 0;
+     padding: 0;
+}
+
+
+.container-cocktails-new{
+  margin-top: 50px;
+  height: calc(100vh - 200px);
+}
+
+.content {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.simple_form input[type='submit']{
+  margin-left: 0;
+}
