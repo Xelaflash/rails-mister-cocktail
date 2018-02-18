@@ -3,17 +3,18 @@ body {
      padding: 0;
 }
 
+.back {
+  margin-top: 15px;
+  margin-left: 15px;
+  border-radius: 10px;
+}
 
 .container-cocktails-new{
-  margin-top: 50px;
-  height: calc(100vh - 200px);
+
+  height: 80vh;
 }
 
 .content {
   margin: 0 auto;
   width: 500px;
-}
-
-.simple_form input[type='submit']{
-  margin-left: 0;
 }
