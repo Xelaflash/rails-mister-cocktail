@@ -9,13 +9,14 @@ body {
   border-radius: 10px;
 }
 
-.cocktail-container {
-  // height: calc(100vh - 150px);
+.cocktail-all {
   height: 80vh;
 }
 
 .ingredients-list {
   padding-top: 17px;
+  padding-left: 10px;
+  width: 200px;
 }
 
 .ingredients-list li {
@@ -30,7 +31,6 @@ a {
 a:hover {
   text-decoration: none;
   color: black;
-
 }
 
 .far.fa-trash-alt {
@@ -39,19 +39,41 @@ a:hover {
 
 .items {
   display: flex;
-  width: -webkit-fill-available;
 }
 
 .row {
   margin-left: 0px;
   margin-right: 0px;
-
 }
 
 .items-left {
-  margin-left: 100px;
+  padding-left: 100px;
 }
 
-.dose {
-  margin: 100px 150px;
+.left-section {
+  display: flex;
 }
+
+.right-section {
+padding-top: 40px;
+padding-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,11 +10,13 @@ body {
 }
 
 .container-cocktails-new{
-
   height: 80vh;
 }
 
-.content {
-  margin: 0 auto;
-  width: 500px;
+.input-section{
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
+

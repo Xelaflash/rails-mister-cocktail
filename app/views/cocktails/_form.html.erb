@@ -1,6 +1,11 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name, placeholder: "Mojito" %>
-  <%= f.input :picture %>
-  <%= f.input :picture_cache, as: :hidden %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center input-section">
+      <%= simple_form_for(@cocktail) do |f| %>
+        <%= f.input :name, placeholder: "Mojito" %>
+        <%= f.input :picture %>
+        <%= f.input :picture_cache, as: :hidden %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
