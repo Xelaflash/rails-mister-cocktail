@@ -7,3 +7,6 @@ class Cocktail < ApplicationRecord
 
   mount_uploader :picture, PhotoUploader
 end
+
+
+

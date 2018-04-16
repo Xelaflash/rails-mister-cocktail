@@ -1,6 +1,14 @@
-<h1>Les cocktails avec du <%= @ingredient.name %> sont :</h1>
-<ul>
-  <% @ingredient.cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-9 col-sm-offset-2 ingredients">
+      <h1 class="text-center ing-list">Les cocktails avec du <%= @ingredient.name %> sont :</h1>
+      <hr>
+      <ul class="ing-details">
+        <% @ingredient.cocktails.each do |cocktail| %>
+          <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+

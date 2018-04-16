@@ -9,6 +9,20 @@ body {
   border-radius: 10px;
 }
 
+.delete {
+  border-radius: 10px;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.upper-section {
+  height: 86px;
+  width: 470px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
 .cocktail-all {
   min-height: 80vh;
 }
@@ -16,7 +30,7 @@ body {
 .ingredients-list {
   padding-top: 17px;
   padding-left: 10px;
-  width: 200px;
+  min-width: 300px;
   margin-left: 75px;
 }
 
@@ -48,7 +62,7 @@ a:hover {
 }
 
 .items-left {
-  padding-left: 100px;
+  padding-left: 75px;
 }
 
 .left-section {
@@ -58,22 +72,29 @@ a:hover {
 .right-section {
   background: white;
   padding: 10px 20px;
-  margin-top: 88px;
-  margin-left: 50px;
+  margin-top: 87px;
   border-radius: 3px;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   height: 380px;
-  width: 70%;
+  width: 75%;
   h4 {
     margin-bottom: 20px;
   }
   .btn {
-    margin-top: 50px;
     width: 100%;
     margin-bottom: 10px
   }
 }
 
+.cocktail-picture {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius: 3px;
+  object-fit: cover;
+    background-size: cover;
+    background-position: center center;
+    -webkit-filter: saturate(8);
+    filter: saturate(2);
+}
 
 
 
