@@ -2,12 +2,13 @@
     <div class="test col-xs-11 col-sm-7 col-sm-offset-3 text-center">
       <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name, placeholder: "Mojito" %>
-        <div id="spinner" class="spinner" style="display:none;">
-    <img id="img-spinner" src="images/spinner.gif" alt="Loading"/>
-</div>
+
         <%= f.input :picture %>
         <%= f.input :picture_cache, as: :hidden %>
-        <%= f.button :submit, class: " btn-form btn btn-primary" %>
+        <%= f.button :submit, class: "submit-upload btn-form btn btn-primary" %>
       <% end %>
+      <div id="spinner" class="spinner" style="display:none;">
+        <%= image_tag "spinner.gif", id: "img-spinner", alt: "loading..." %>
+    </div>
     </div>
   </div>
