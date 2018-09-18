@@ -4,11 +4,7 @@
     <div class="items-left">
       <div class="upper-section">
         <h1><%= @cocktail.name.capitalize %></h1>
-      <%#= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, class: "delete btn btn-danger card-delete" %>
-      <%= link_to cocktail_path(@cocktail),
-  method: :delete, class: 'card-delete' do %>
-    <div class="delete btn btn-danger"><i class="fas fa-trash-alt"></i></div>
-  <% end %>
+      <%= button_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, class: "delete btn btn-danger card-delete" %>
       </div>
 
       <div class="left-section">

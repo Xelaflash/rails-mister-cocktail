@@ -27,7 +27,6 @@ $(document).ready(function(){
 
      });
 
-
      $(document).ready(function(){
          $('.submit-upload').click(function() {
              $('#spinner').show();
