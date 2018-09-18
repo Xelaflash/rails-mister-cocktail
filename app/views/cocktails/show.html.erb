@@ -1,36 +1,30 @@
-<div class="cocktail-all container-fluid">
-  <%= link_to 'Back', cocktails_path, class: "back btn btn-success hidden-xs" %>
-  <div class="row">
-    <div class=" items">
-      <div class="items-left">
-        <div class="upper-section">
-          <h1><%= @cocktail.name.capitalize %></h1>
-        <%= link_to "Delete cocktail", cocktail_path, method: :delete, data: { confirm: "Do you want to delete this cocktail?" }, class: "delete btn btn-danger" %>
-        </div>
-
-        <div class="left-section">
-          <%= cl_image_tag @cocktail.picture, height: 380, width: 470, crop: :fill, class: "cocktail-picture"%>
-          <ul class="ingredients-list">
-            <% @cocktail.doses.each do |dose| %>
-              <li><%= dose.description %> <strong> <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient)%></strong> <%= link_to "<i class='far fa-trash-alt'></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></li>
-            <% end %>
-          </ul>
-        </div>
+<%= link_to 'Back', cocktails_path, class: "back btn btn-success hidden-xs" %>
+<div class="cocktail-all container">
+  <div class=" items">
+    <div class="items-left">
+      <div class="upper-section">
+        <h1><%= @cocktail.name.capitalize %></h1>
+      <%= link_to "Delete cocktail", cocktail_path, method: :delete, data: { confirm: "Do you want to delete this cocktail?" }, class: "delete btn btn-danger" %>
       </div>
-      <hr>
 
-      <div class="container">
-          <div class="right-section col-md-6 col-md-offset-1 hidden-xs">
-            <h4>Create your recipe</h4>
-              <%= simple_form_for([@cocktail, @dose]) do |f| %>
-                <%= f.input :description %>
-                <%= f.input :ingredient_id, collection: @ingredients %>
-                <%= f.button :submit, class: "btn btn-primary" %>
-              <% end %>
-            <br>
-          </div>
-
+      <div class="left-section">
+        <%= cl_image_tag @cocktail.picture, height: 380, width: 470, crop: :fill, class: "cocktail-picture"%>
+        <ul class="ingredients-list">
+          <% @cocktail.doses.each do |dose| %>
+            <li><%= dose.description %> <strong> <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient)%></strong> <%= link_to "<i class='far fa-trash-alt'></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
+    <hr>
+        <div class="right-section col-md-12 hidden-xs">
+          <h4>Create your recipe</h4>
+            <%= simple_form_for([@cocktail, @dose]) do |f| %>
+              <%= f.input :description %>
+              <%= f.input :ingredient_id, collection: @ingredients %>
+              <%= f.button :submit, class: "btn btn-primary" %>
+            <% end %>
+          <br>
+        </div>
   </div>
 </div>
