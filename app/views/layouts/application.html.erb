@@ -13,17 +13,7 @@
     <%= render "layouts/navbar" %>
     <%= yield %>
     <%= render "layouts/footer" %>
+    <%= javascript_pack_tag 'application' %>
+    <%#= stylesheet_pack_tag 'application' %>
   </body>
-  <script type="text/javascript">
-$(document).ready(function(){
-    $("#spinner").bind("ajaxSend", function() {
-        $(this).show();
-    }).bind("ajaxStop", function() {
-        $(this).hide();
-    }).bind("ajaxError", function() {
-        $(this).hide();
-    });
-
-     });
-</script>
 </html>
