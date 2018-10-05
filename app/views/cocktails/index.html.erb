@@ -3,7 +3,7 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-sm-3">
-        <div class="card">
+        <div class="card" data-aos="flip-down">
           <%= cl_image_tag cocktail.picture, height: 300, width: 400, crop: :thumb, class: "card-picture" %>
           <div class="card-info">
             <h5><%= cocktail.name %></h5>
@@ -14,5 +14,3 @@
     <% end %>
   </div>
 </div>
-
-

@@ -1,7 +1,6 @@
 import swal from 'sweetalert';
 
 const swalButton = document.querySelector('.delete-item');
-console.log(swalButton)
 
 function bindSweetAlertButtonDemo(e) {
    const form = this;
@@ -28,5 +27,6 @@ function bindSweetAlertButtonDemo(e) {
   });
 };
 
-
-swalButton.addEventListener('click', bindSweetAlertButtonDemo);
+if (swalButton) {
+  swalButton.addEventListener('click', bindSweetAlertButtonDemo);
+}

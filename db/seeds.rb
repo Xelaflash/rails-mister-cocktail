@@ -10,4 +10,7 @@ list = JSON.parse(user_serialized)
 list["drinks"].each do |drink|
   Ingredient.create!(name: drink["strIngredient1"])
 end
+
+
+
 puts "the end ingredients"
