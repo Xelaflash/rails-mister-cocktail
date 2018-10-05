@@ -1,6 +1,7 @@
 import swal from 'sweetalert';
 
-const swalButton = document.querySelector('.button_to');
+const swalButton = document.querySelector('.delete-item');
+console.log(swalButton)
 
 function bindSweetAlertButtonDemo(e) {
    const form = this;
