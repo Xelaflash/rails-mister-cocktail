@@ -7,8 +7,4 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 import '../components/alert';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-
-
-AOS.init();
+import '../components/scroll_anim';
