@@ -14,21 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-
-$(document).ready(function(){
-    $("#spinner").bind("ajaxSend", function() {
-        $(this).show();
-    }).bind("ajaxStop", function() {
-        $(this).hide();
-    }).bind("ajaxError", function() {
-        $(this).hide();
-    });
-
-     });
-
-     $(document).ready(function(){
-         $('.submit-upload').click(function() {
-             $('#spinner').show();
-         });
-     });
