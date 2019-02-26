@@ -6,7 +6,6 @@
     "sweetalert": "^2.1.0"
   },
   "devDependencies": {
-    "webpack": "^4.28.3",
     "webpack-dev-server": "2.11.2"
   }
 }
