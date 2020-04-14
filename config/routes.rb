@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :cocktails, only: [:index, :show, :new, :create, :destroy]  do
     resources :doses, only: [:create]
     end
