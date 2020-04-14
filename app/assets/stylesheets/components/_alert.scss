@@ -5,22 +5,35 @@
 .alert {
   text-align: center;
   color: white;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 15px;
   width: 100%;
-  height: 71px;
   border: none;
   z-index: 9;
-  box-shadow: 0 -3px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.alert-dismissible .close {
+  position: relative;
+  top: -5px;
+  right: 0;
+  color: white;
+  opacity: 0.8;
 }
 
 .alert-info {
   background: $green;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .alert-warning {
   background: $red;
-  font-size: 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.alert-danger {
+  background: $red;
+  font-size: 16px;
   color: white;
 }

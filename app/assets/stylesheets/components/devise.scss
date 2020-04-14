@@ -55,6 +55,10 @@
   }
 }
 
+.devise-links:hover {
+  opacity: 0.4;
+}
+
 @media(max-width: 568px) {
   .form-login {
     margin: 40px 0 40px 0;
