@@ -14,6 +14,12 @@
 @import "components/index";
 @import "pages/index";
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: $body-font;
 }
