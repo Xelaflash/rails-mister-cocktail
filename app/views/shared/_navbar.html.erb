@@ -1,24 +1,21 @@
 <nav class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand hidden-xs" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
-  <h1 class="hidden-xs">Fancy Cocktails</h1>
-  <!-- Right Navigation -->
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active navbar-wagon-right">
-          <%= link_to "Create a cocktail", new_cocktail_path, class: "bouton-custom" %>
-        </li>
-        <li class="navbar-wagon-link">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-        </li>
-      <% else %>
-        <li class="navbar-wagon-link">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
+  <div class="nav-logo">
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+      <%= image_tag "logo.png", height: 50 %>
+    <% end %>
+  </div>
+  <div class="nav-title">
+    <h1 class="hidden-xs">Fancy Cocktails</h1>
+  </div>
+  <div class="nav-right">
+    <% if user_signed_in? %>
+      <!-- <li class="nav-item active navbar-wagon-right">
+        <%#= link_to "Create a cocktail", new_cocktail_path, class: "bouton-custom" %>
+        </li> -->
+      <%= link_to t(".profile", default: "My account"),edit_user_registration_path, class: "navbar-item navbar-link" %>
+      <%= link_to t(".sign_out", default: "Sign out"),destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
+    <% else %>
+      <%= link_to "Login", new_user_session_path, class: "navbar-item navbar-link"%>
+    <% end %>
   </div>
 </nav>
