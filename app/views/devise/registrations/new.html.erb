@@ -1,25 +1,38 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<div class="log-page register">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+        <div class="form-login">
+          <h2>Sign Up</h2>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
+            <div class="form-inputs" id="start">
+              <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                  <%= f.input :email, autofocus: true, placeholder: "pierre.durant@gmail.com" %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                  <%= f.input :nickname, autofocus: true, placeholder: "JeanBlaguin", error: 'Ce champ est obligatoire.' %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                  <%= f.input :password, label: "Mot de passe", hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length), placeholder: "•••••••••", required: true, error: 'Ce champ est obligatoire.' %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                  <%= f.input :password_confirmation,label: "Confirmer votre mot de passe", placeholder: "•••••••••", required: true %>
+                </div>
+              </div>
+              <div class="form-actions">
+                <%= f.button :submit, "S'inscrire", class: "btn btn-primary"  %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

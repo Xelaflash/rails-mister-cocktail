@@ -9,7 +9,9 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
+    "@prettier/plugin-ruby": "^0.18.1",
     "babel-loader": "^8.0.6",
+    "prettier": "^2.0.4",
     "webpack-dev-server": "3.8.1"
   },
   "name": "mister-cocktail",

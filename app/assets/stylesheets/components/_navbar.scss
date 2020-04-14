@@ -1,9 +1,6 @@
-.navbar-wagon h1 {
-  font-family: 'Shadows Into Light', cursive;
-}
-
 .navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.2), 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
   background: white;
   transition: all 0.3s ease;
   height: 70px;
@@ -11,6 +8,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+
+  h1 {
+    font-family: $headers-font;
+  }
 }
 
 /* Logo */

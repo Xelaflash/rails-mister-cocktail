@@ -6,13 +6,15 @@
   justify-content: space-between;
   height: 70px;
   padding: 10px 25px;
-  color: rgba(0,0,0,0.3);
-  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.2), 0 1px 0 0 rgba(0, 0, 0, 0.2);
 }
+
 .footer-links {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
   color: black;
   opacity: 0.15;
@@ -20,9 +22,11 @@
   font-size: 24px;
   padding: 0px 10px;
 }
+
 .footer-links a:hover {
   opacity: 1;
 }
+
 .footer_xela .fa-heart {
   color: #D23333;
 }
@@ -30,4 +34,5 @@
 .footer-copyright {
   font-size: 15px;
 }
+
 /* fin footer */
