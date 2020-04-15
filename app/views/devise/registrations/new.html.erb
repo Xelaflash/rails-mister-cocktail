@@ -1,29 +1,29 @@
 <div class="log-page register">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+      <div class="col-lg-6 col-md-10 mx-auto">
         <div class="form-login">
           <h2>Sign Up</h2>
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= f.error_notification %>
             <div class="form-inputs" id="start">
               <div class="row">
-                <div class="col-xs-8 col-xs-offset-2">
+                <div class="col-lg-8 col-md-8 mx-auto">
                   <%= f.input :email, autofocus: true, placeholder: "pierre.durant@gmail.com" %>
                 </div>
               </div>
               <div class="row">
-                <div class="col-xs-8 col-xs-offset-2">
+                <div class="col-lg-8 col-md-8 mx-auto">
                   <%= f.input :nickname, autofocus: true, placeholder: "JeanBlaguin" %>
                 </div>
               </div>
               <div class="row">
-                <div class="col-xs-8 col-xs-offset-2">
+                <div class="col-lg-8 col-md-8 mx-auto">
                   <%= f.input :password, label: "Password", hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "•••••••••", required: true, error: 'Field is mandatory.' %>
                 </div>
               </div>
               <div class="row">
-                <div class="col-xs-8 col-xs-offset-2">
+                <div class="col-lg-8 col-md-8 mx-auto">
                   <%= f.input :password_confirmation,label: "Confirm password", placeholder: "•••••••••", required: true %>
                 </div>
               </div>
