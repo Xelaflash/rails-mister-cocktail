@@ -8,10 +8,12 @@ https://fancy-cocktail.herokuapp.com/
 
 ## Stack
 
-Rails 5.1.7
+Rails 5.2.4.2
 Ruby 2.6.6
 Devise
-Pundit
 Yarn
 PostgreSql
 Webpack
+Cloudinary
+Bootstrap
+Jquery
