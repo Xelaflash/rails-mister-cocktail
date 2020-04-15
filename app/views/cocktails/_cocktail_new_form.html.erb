@@ -4,11 +4,9 @@
     <%= f.input :name, placeholder: "Mojito" %>
     <%= f.input :recipe, placeholder: "Add the recipe steps", as: :text %>
     <%= f.input :picture, input_html: { class: 'd-none', id: 'photo-input' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
-    <%= f.input :picture_cache, as: :hidden %>
+    <div class="preview">
+      <%= image_tag "", width: 200, height: 250, class: "hidden", id: "photo-preview" %>
+    </div>
     <%= f.button :submit, class: "btn btn-devise" %>
   <% end %>
-  <div id="spinner" class="spinner" style="display:none;">
-    <%= image_tag "spinner.gif", id: "img-spinner", alt: "loading..." %>
-  </div>
-  <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
 </div>

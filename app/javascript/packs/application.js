@@ -10,3 +10,5 @@ $(function() {
     $('.alert').fadeOut('slow');
   }, 4000);
 });
+
+previewImageOnFileSelect();

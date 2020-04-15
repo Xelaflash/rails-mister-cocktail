@@ -8,5 +8,5 @@ class Cocktail < ApplicationRecord
   validates :picture, presence: true
   validates :recipe, presence: true
 
-  mount_uploader :picture, PhotoUploader
+  has_one_attached :picture
 end
