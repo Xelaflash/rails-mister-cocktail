@@ -9,9 +9,7 @@
   </div>
   <div class="nav-right">
     <% if user_signed_in? %>
-      <!-- <li class="nav-item active navbar-wagon-right">
-        <%#= link_to "Create a cocktail", new_cocktail_path, class: "bouton-custom" %>
-        </li> -->
+      <%= link_to "Create a cocktail", new_cocktail_path, class: "bouton-custom" %>
       <%= link_to t(".profile", default: "My account"),edit_user_registration_path, class: "navbar-item navbar-link" %>
       <%= link_to t(".sign_out", default: "Sign out"),destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
     <% else %>

@@ -1,16 +1,15 @@
-require 'json'
-require 'open-uri'
+# frozen_string_literal: true
 
-puts "Deleting all the ingredients \o/"
+puts "Deleting all the ingredients, cocktails, users, doses \o/"
 Ingredient.destroy_all
-url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
-user_serialized = open(url).read
-list = JSON.parse(user_serialized)
+Cocktail.destroy_all
+User.destroy_all
+Dose.destroy_all
 
-list["drinks"].each do |drink|
-  Ingredient.create!(name: drink["strIngredient1"])
-end
-
-
-
-puts "the end ingredients"
+puts 'Creating ingredients'
+puts '-------------'
+Ingredient.create(name: 'Mount Gay Black Barrel')
+Ingredient.create(name: 'Fresh Lime Juice')
+Ingredient.create(name: 'Orgeat')
+Ingredient.create(name: 'Cointreau')
+puts 'Seed done'
