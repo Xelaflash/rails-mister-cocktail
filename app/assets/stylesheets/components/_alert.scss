@@ -35,3 +35,8 @@
   font-size: 16px;
   color: white;
 }
+
+// simple form error notif
+.has-error .help-block {
+  color: $red;
+}

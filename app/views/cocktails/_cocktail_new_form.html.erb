@@ -1,0 +1,13 @@
+<div class="col-lg-8 mx-auto">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :name, placeholder: "Mojito" %>
+    <%= f.input :recipe, placeholder: "Add the recipe steps", as: :text %>
+    <%= f.input :picture %>
+    <%= f.input :picture_cache, as: :hidden %>
+    <%= f.button :submit, class: "btn btn-devise" %>
+  <% end %>
+  <div id="spinner" class="spinner" style="display:none;">
+    <%= image_tag "spinner.gif", id: "img-spinner", alt: "loading..." %>
+  </div>
+</div>

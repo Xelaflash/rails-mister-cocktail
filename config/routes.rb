@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
-  resources :cocktails, only: [:index, :show, :new, :create, :destroy]  do
+  resources :cocktails, only: %i[index show new create destroy] do
     resources :doses, only: [:create]
-    end
+  end
 
-    resources :doses, only: [:destroy]
-    resources :ingredients, only: [:show]
+  resources :doses, only: [:destroy]
+  resources :ingredients, only: [:show]
 
-    root to: "cocktails#index"
+  root to: 'cocktails#index'
 end

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CocktailsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
     @cocktails = Cocktail.all
@@ -18,6 +20,7 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktails_params)
     @cocktail.name = params[:cocktail][:name].capitalize
+    raise
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
@@ -31,12 +34,9 @@ class CocktailsController < ApplicationController
     redirect_to cocktails_path
   end
 
-
   private
 
   def cocktails_params
-    params.require(:cocktail).permit(:name, :picture)
+    params.require(:cocktail).permit(:name, :recipe, :picture)
   end
-
-
 end

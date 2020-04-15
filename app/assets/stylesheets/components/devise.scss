@@ -21,7 +21,7 @@
 }
 
 
-.form-login-devise {
+.form-all {
   background: white;
   padding: 10px 20px;
   margin: 40px 0;
@@ -33,22 +33,22 @@
     font-weight: bold;
     text-align: center;
   }
+}
 
-  #user_remember_me {
-    margin-right: 8px;
-    vertical-align: 2px;
-  }
+#user_remember_me {
+  margin-right: 8px;
+  vertical-align: 2px;
+}
 
-  label {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
+label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
 
-  .form-control {
-    font-size: 15px;
-    font-weight: 400;
-    color: $charcoal;
-  }
+.form-control {
+  font-size: 15px;
+  font-weight: 400;
+  color: $charcoal;
 }
 
 .devise-links:hover {
