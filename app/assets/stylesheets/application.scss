@@ -24,6 +24,13 @@ body {
 body {
   font-family: $body-font;
   color: $charcoal;
+  background: $light-gray;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $headers-font;
 }
 
 .page-title {
