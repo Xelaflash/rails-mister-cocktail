@@ -5,6 +5,7 @@ const previewImageOnFileSelect = () => {
     // we add a listener to know when a new picture is uploaded
     input.addEventListener('change', () => {
       // we call the displayPreview function (who retrieve the image url and display it)
+      // eslint-disable-next-line no-use-before-define
       displayPreview(input);
     });
   }
@@ -17,7 +18,7 @@ const displayPreview = input => {
       document.getElementById('photo-preview').src = event.currentTarget.result;
     };
     reader.readAsDataURL(input.files[0]);
-    document.getElementById('photo-preview').classList.remove('hidden');
+    document.getElementById('photo-preview').classList.remove('d-none');
   }
 };
 
