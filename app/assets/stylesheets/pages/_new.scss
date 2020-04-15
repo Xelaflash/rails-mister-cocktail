@@ -1,34 +1,24 @@
-.back {
+.back-btn {
   margin-top: 15px;
-  margin-left: 40px;
+  margin-left: -100px;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .container-cocktails-new {
-  height: 76vh;
+  min-height: calc(100vh - 140px);
+
 }
 
-.row {
-  margin: 0;
+#cocktail-new-title {
+  margin-top: 0;
 }
 
 
-.form-login {
+.new-cocktail-form {
   background: white;
   padding: 10px 20px;
-  margin-top: 50px;
+  margin-top: 80px;
   border-radius: 3px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-
-  .btn {
-    width: 100%;
-    margin-bottom: 20px
-  }
-}
-
-
-@media (min-width: 768px) {
-  .col-sm-offset-3 {
-    margin-left: 30%;
-  }
 }

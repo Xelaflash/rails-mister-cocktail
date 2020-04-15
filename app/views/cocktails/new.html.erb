@@ -1,11 +1,7 @@
-  <%= link_to 'Back', cocktails_path, class: " back btn btn-success" %>
-  <div class="container-cocktails-new">
-    <div class="row">
-
-        <h1 class="text-center">Create your own cocktail</h1>
-        <div class="form-login col-xs-12 col-sm-4 col-sm-offset-4 text-center">
-          <%= render 'form' %>
-        </div>
-
-    </div>
+<div class="container container-cocktails-new">
+  <%= link_to 'Back', cocktails_path, class: "btn back-btn" %>
+  <h1 class="text-center page-title" id="cocktail-new-title">Create your own cocktail</h1>
+  <div class="new-cocktail-form mx-auto col-lg-6">
+    <%= render 'form' %>
+  </div>
 </div>
