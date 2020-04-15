@@ -8,3 +8,20 @@
 .container-cocktails-new {
   min-height: calc(100vh - 140px);
 }
+
+.upload-photo {
+  border: 1px solid #ced4da;
+  padding: 16px 24px;
+  cursor: pointer;
+  font-weight: 500;
+  background: white;
+  border-radius: 0.25rem;
+  width: 100%;
+  text-align: center;
+  background: #ced4da;
+  box-shadow: -6px -6px 10px -3px rgba(179, 184, 190, 0.6), 6px 6px 13px rgba(212, 220, 227, 0.8);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
