@@ -2,9 +2,32 @@
   min-height: calc(100vh - 140px);
 }
 
+.cocktail-show-banner {
+  background: $charcoal;
+  color: white;
+  text-align: center;
+  padding: 50px;
 
+  h2 {
+    font-family: $header-font;
+    padding: 40px 0 10px;
+    font-size: 26px;
+    letter-spacing: 0.1em;
+    color: $red;
+    text-shadow: rgba(0, 0, 0, 0.6) 4px 4px 8px,
+      rgba(46, 64, 87, 1) -4px -4px 8px;
+  }
 
-
+  h1 {
+    font-family: $body-font;
+    font-size: 44px;
+    margin: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: rgba(0, 0, 0, 1) 4px 4px 8px,
+      rgba(46, 64, 87, 1) -4px -4px 8px;
+  }
+}
 
 
 
