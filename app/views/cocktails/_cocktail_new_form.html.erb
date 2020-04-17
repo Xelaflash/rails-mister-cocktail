@@ -3,7 +3,7 @@
     <%= f.error_notification %>
     <%= f.input :name, placeholder: "Mojito" %>
     <%= f.input :recipe, placeholder: "Add the recipe steps", as: :text %>
-    <%= f.input :photos, input_html: { class: 'd-none', id: 'photo-input', multiple: true }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo', as: :file %>
+    <%= f.input :photo, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo', as: :file, input_html: { class: 'd-none', id: 'photo-input'} %>
     <div class="preview">
       <%= image_tag "", width: 200, height: 250, class: "d-none", id: "photo-preview" %>
     </div>
