@@ -8,4 +8,8 @@ class Cocktail < ApplicationRecord
   validates :recipe, presence: true
 
   has_one_attached :photo
+
+  def fix_string
+    self.recipe = recipe.gsub(/\r\n/, '')
+  end
 end

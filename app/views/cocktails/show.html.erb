@@ -4,12 +4,20 @@
     <div class="sep"></div>
     <h1><%= @cocktail.name %></h1>
   </div>
-  <div class="cocktail-section">
+  <div class="cocktail-section container">
     <div class="cocktail-picture">
+      <%= cl_image_tag @cocktail.photo.key, width: 350, crop: :fill %>
     </div>
     <div class="cocktail-description">
-      <div class="ingredients"></div>
-      <div class="recipe"></div>
+      <div class="cocktail-description-card">
+        <h2>Ingredients</h2>
+        <div class="card-sep"></div>
+      </div>
+      <div class="cocktail-description-card">
+        <h2>Recipe</h2>
+        <div class="card-sep"></div>
+        <%= @cocktail.fix_string %>
+      </div>
     </div>
   </div>
 </div>

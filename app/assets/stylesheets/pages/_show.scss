@@ -10,7 +10,7 @@
 
   h2 {
     font-family: $header-font;
-    padding: 40px 0 10px;
+    padding-bottom: 10px;
     font-size: 26px;
     letter-spacing: 0.1em;
     color: $red;
@@ -21,7 +21,7 @@
   h1 {
     font-family: $body-font;
     font-size: 44px;
-    margin: 40px;
+    margin-top: 40px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-shadow: rgba(0, 0, 0, 1) 4px 4px 8px,
@@ -29,10 +29,34 @@
   }
 }
 
+.cocktail-picture img {
+  margin-top: 20px;
+  border-radius: 3px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
 
 
+.cocktail-description-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 60px 45px;
+  height: 400px;
+  width: 450px;
+  margin: 20px;
+  border-radius: 3px;
 
+  h2 {
+    font-family: $header-font;
+    color: $red;
+    text-shadow: 2px 3px 1px rgba(46, 64, 87, 0.2);
+    margin-left: 15px;
+  }
+}
 
+.card-sep {
+  --link-color: 46, 64, 87;
+  height: 3px;
+  background-image: linear-gradient(to right, transparent 0%, rgba(var(--link-color), 0.6) 30%, rgba(var(--link-color), 0.7) 50%, rgba(var(--link-color), 0.6) 70%, transparent 100%);
+}
 
 
 // .back {

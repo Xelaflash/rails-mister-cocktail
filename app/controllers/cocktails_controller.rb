@@ -2,7 +2,7 @@
 
 class CocktailsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
-  before_action :set_cocktail, only: %i[show edit update destroy]
+  before_action :set_cocktail, only: %i[show edit update destroy display_recipe]
 
   def index
     @cocktails = Cocktail.all
@@ -27,15 +27,24 @@ class CocktailsController < ApplicationController
     end
   end
 
-  def edit; end
-
   def update
-    @cocktail.update(cocktails_params)
+    if @cocktail.update(cocktails_params)
+      flash[:notice] = 'Cocktail updated'
+      redirect_to cocktail_path(@cocktail)
+    else
+      flash.now[:alert] = 'Update did not work try again'
+      render :update
+    end
   end
 
   def destroy
     @cocktail.destroy
     redirect_to cocktails_path
+  end
+
+  def recipe_string
+    str = @cocktail.recipe
+    str.gsub(/\r\n/, '****')
   end
 
   private
