@@ -24,13 +24,12 @@ body {
 body {
   font-family: $body-font;
   color: $charcoal;
-  background: $light-gray;
+  background-color: $bg;
+  background-image: url('brick-wall.png');
 }
 
-h1,
-h2,
-h3 {
-  font-family: $headers-font;
+h1 {
+  font-family: $main-title-font;
 }
 
 .page-title {

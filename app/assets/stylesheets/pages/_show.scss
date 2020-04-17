@@ -1,86 +1,100 @@
-.back {
-  margin-top: 15px;
-  margin-left: 40px;
-  border-radius: 10px;
+.show-page {
+  min-height: calc(100vh - 140px);
 }
 
-.delete {
-  border-radius: 10px;
-  height: 40px;
-  margin-top: 15px;
-}
 
-.upper-section {
-  height: 86px;
-  width: 470px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0 30px 0;
-}
 
-.cocktail-all {
-  min-height: 77vh;
-}
 
-.ingredients-list {
-  padding-top: 17px;
-  padding-left: 10px;
-  min-width: 300px;
-  margin-left: 75px;
-}
 
-.ingredients-list li {
-  padding-top: 5px;
-}
 
-a {
-  text-decoration: none;
-  color: black;
-}
 
-a:hover {
-  text-decoration: none;
-  color: black;
-}
 
-.far.fa-trash-alt {
-  padding-left: 10px;
-}
 
-.items {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20px;
-}
 
-.left-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 
-.right-section {
-  background: white;
-  padding: 10px 20px;
-  margin-top: 139px;
-  border-radius: 3px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-  height: 380px;
+// .back {
+//   margin-top: 15px;
+//   margin-left: 40px;
+//   border-radius: 10px;
+// }
 
-  h4 {
-    margin-bottom: 20px;
-  }
-}
+// .delete {
+//   border-radius: 10px;
+//   height: 40px;
+//   margin-top: 15px;
+// }
 
-.cocktail-picture {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-  border-radius: 3px;
-  margin-top: 12px;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center center;
-  -webkit-filter: saturate(8);
-  filter: saturate(2);
-}
+// .upper-section {
+//   height: 86px;
+//   width: 470px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin: 10px 0 30px 0;
+// }
+
+// .cocktail-all {
+//   min-height: 77vh;
+// }
+
+// .ingredients-list {
+//   padding-top: 17px;
+//   padding-left: 10px;
+//   min-width: 300px;
+//   margin-left: 75px;
+// }
+
+// .ingredients-list li {
+//   padding-top: 5px;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: black;
+// }
+
+// a:hover {
+//   text-decoration: none;
+//   color: black;
+// }
+
+// .far.fa-trash-alt {
+//   padding-left: 10px;
+// }
+
+// .items {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   margin-top: 20px;
+// }
+
+// .left-section {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+// }
+
+// .right-section {
+//   background: white;
+//   padding: 10px 20px;
+//   margin-top: 139px;
+//   border-radius: 3px;
+//   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+//   height: 380px;
+
+//   h4 {
+//     margin-bottom: 20px;
+//   }
+// }
+
+// .cocktail-picture {
+//   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+//   border-radius: 3px;
+//   margin-top: 12px;
+//   object-fit: cover;
+//   background-size: cover;
+//   background-position: center center;
+//   -webkit-filter: saturate(8);
+//   filter: saturate(2);
+// }

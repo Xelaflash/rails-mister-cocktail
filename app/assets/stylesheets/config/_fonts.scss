@@ -3,7 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 
 // Define fonts for body and headers
-$headers-font: 'Shadows Into Light',
+$main-title-font: 'Shadows Into Light',
 'cursive';
 $body-font: 'Raleway',
 'sans-serif';
+
+
+@font-face {
+  font-family: "Barrel";
+  src: url(asset-path('barrel.ttf')) format("truetype");
+}
