@@ -2,13 +2,13 @@
 
 class CocktailsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :set_cocktail, only: %i[show edit update destroy]
 
   def index
     @cocktails = Cocktail.all
   end
 
   def show
-    @cocktail = Cocktail.find(params[:id])
     @dose = Dose.new
     @ingredients = Ingredient.all
   end
@@ -27,8 +27,13 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    @cocktail.update(cocktails_params)
+  end
+
   def destroy
-    @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
     redirect_to cocktails_path
   end
@@ -37,5 +42,9 @@ class CocktailsController < ApplicationController
 
   def cocktails_params
     params.require(:cocktail).permit(:name, :recipe, photos: [])
+  end
+
+  def set_cocktail
+    @cocktail = Cocktail.find(params[:id])
   end
 end

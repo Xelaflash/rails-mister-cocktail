@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  resources :cocktails, only: %i[index show new create destroy] do
+  resources :cocktails do
     resources :doses, only: [:create]
   end
 

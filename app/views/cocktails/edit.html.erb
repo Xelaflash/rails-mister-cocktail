@@ -1,0 +1,8 @@
+<div class="container container-cocktails-new">
+  <%= link_to 'Back', cocktails_path, class: "btn back-btn" %>
+  <div class="form-all col-lg-6 mx-auto mt-0">
+    <h2>Edit cocktail</h2>
+    <%= @cocktail.name %>
+    <%= render 'cocktail_new_form' %>
+  </div>
+</div>
