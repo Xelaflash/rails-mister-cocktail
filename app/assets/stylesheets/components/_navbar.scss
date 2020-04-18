@@ -13,10 +13,6 @@
     font-family: $main-title-font;
     margin: 0;
   }
-
-  --link-color: 46,
-  64,
-  87;
 }
 
 /* Logo */
@@ -42,7 +38,8 @@
 }
 
 .navbar-link:hover {
-  color: rgb(var(--link-color));
+  --link-color: 46, 64, 87;
+  color: rgba(var(--link-color), 1);
   text-decoration: none;
 }
 

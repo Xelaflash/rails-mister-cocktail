@@ -2,7 +2,7 @@
 
 class CocktailsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
-  before_action :set_cocktail, only: %i[show edit update destroy display_recipe]
+  before_action :set_cocktail, only: %i[show edit update destroy]
 
   def index
     @cocktails = Cocktail.all

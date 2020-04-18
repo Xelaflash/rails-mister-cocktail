@@ -34,11 +34,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'autoprefixer-rails'
 gem 'cloudinary'
 gem 'devise'
 gem 'figaro'
 gem 'font-awesome-sass'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
