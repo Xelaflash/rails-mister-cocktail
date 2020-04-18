@@ -42,11 +42,6 @@ class CocktailsController < ApplicationController
     redirect_to cocktails_path
   end
 
-  def recipe_string
-    str = @cocktail.recipe
-    str.gsub(/\r\n/, '****')
-  end
-
   private
 
   def cocktails_params

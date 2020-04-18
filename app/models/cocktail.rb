@@ -10,6 +10,6 @@ class Cocktail < ApplicationRecord
   has_one_attached :photo
 
   def fix_string
-    self.recipe = recipe.gsub(/\r\n/, '')
+    self.recipe = recipe.gsub(/\r\n/, '').split('.').each(&:strip!)
   end
 end

@@ -16,7 +16,14 @@
       <div class="cocktail-description-card">
         <h2>Recipe</h2>
         <div class="card-sep"></div>
-        <%= @cocktail.fix_string %>
+        <div class="recipe_steps">
+          <% @cocktail.fix_string.each_with_index do |step, index| %>
+            <p class="step">
+              <span class="step-nbr">0<%= index + 1 %></span>
+              <span class="step-item"><%= step %></span>
+            </p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
