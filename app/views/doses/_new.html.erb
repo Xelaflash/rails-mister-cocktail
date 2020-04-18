@@ -1,0 +1,14 @@
+<div class="">
+  <% @ingredients.each do |r| %>
+    <h2><%= r.name %></h2>
+    <p>
+      <%= r.tag_list %>
+    </p>
+  <% end %>
+  <h4>Add ingredients & Dose</h4>
+  <%= simple_form_for [cocktail, dose] do |f| %>
+    <%= f.input :description, required: true, label: "Dose", placeholder: "2cl" %>
+    <%= f.input :ingredient_id, as: :select, input_html: {class: "ingredients_select"}, collection: @ingredients, prompt: 'Select the ingredient' %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>

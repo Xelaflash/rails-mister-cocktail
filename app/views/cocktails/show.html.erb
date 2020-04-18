@@ -39,15 +39,10 @@
     </div>
   </div>
   <hr>
-  <div class="right-section col-md-12 hidden-xs">
-    <h4>Add ingredients & Dose</h4>
-    <%= simple_form_for [@cocktail, @dose] do |f| %>
-      <%= f.input :description, required: true, label: "Dose", placeholder: "2cl" %>
-      <%= f.input :ingredient_id, collection: @ingredients, prompt: 'Select the ingredient' %>
-      <%= f.button :submit, class: "btn btn-primary" %>
-    <% end %>
+  <div class="col-sm-12 col-md-6">
+    <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
   </div>
-  <div class="-ingredients-create">
+  <div class="ingredients-create">
     <h4>Don't find the ingredients? Create it (or go to admin panel)</h4>
     <%= simple_form_for [@cocktail, @ingredient] do |f| %>
       <%= f.input :name, required: true, label: "Ingredient", placeholder: "Lime Juice" %>
