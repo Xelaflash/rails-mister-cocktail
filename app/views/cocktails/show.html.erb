@@ -27,4 +27,33 @@
       </div>
     </div>
   </div>
+  <div class="ingredients-form">
+    <% if user_signed_in? && current_user.admin? %>
+      <hr>
+      <h3>Only for admin</h3>
+      <ul class="ingredients-list">
+        <% @cocktail.doses.each do |dose| %>
+          <li><%= dose.description %> <strong> <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient)%></strong> <%= link_to "<i class='far fa-trash-alt'></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-delete' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div class="right-section col-md-12 hidden-xs">
+    <h4>Add ingredients & Dose</h4>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description, required: true, label: "Dose" %>
+      <%= f.input :ingredient_id, collection: @ingredients %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <div class="-ingredients-create">
+    <h4>Don't find the ingredients? Create it</h4>
+    <%= simple_form_for [@cocktail, @ingredient] do |f| %>
+      <%= f.input :name, required: true, label: "Ingredient" %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+<% end %>
+</div>
 </div>
