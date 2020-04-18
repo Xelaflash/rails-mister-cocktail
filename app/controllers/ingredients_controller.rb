@@ -22,6 +22,6 @@ class IngredientsController < ApplicationController
   private
 
   def ingredients_params
-    params.require(:ingredient).permit(:name)
+    params.require(:ingredient).permit(:name, :tag_list)
   end
 end
