@@ -1,0 +1,8 @@
+<div class="ingredients-create">
+  <h4>Don't find the ingredients? Create it (or go to admin panel)</h4>
+  <%= simple_form_for [cocktail, ingredient] do |f| %>
+    <%= f.input :name, required: true, label: "Ingredient", placeholder: "Lime Juice" %>
+    <%= f.input :tag_list, collection: [ "Spirit", "Soft Drinks", "Modifier", "Garnish" ], prompt: 'Select the category'%>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>
