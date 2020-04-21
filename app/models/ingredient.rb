@@ -10,6 +10,10 @@ class Ingredient < ApplicationRecord
     "#{name} (#{tag_list})"
   end
 
+  def xx
+    tags
+  end
+
   # def group_by_tag
   #   tag_list
   # end

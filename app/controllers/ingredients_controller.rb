@@ -2,9 +2,9 @@
 
 class IngredientsController < ApplicationController
   def create
+    @cocktail = Cocktail.find(params[:cocktail_id])
     @ingredient = Ingredient.new(ingredients_params)
     @ingredient.name = params[:ingredient][:name].capitalize
-    @cocktail = Cocktail.find(params[:cocktail_id])
     if @ingredient.save
       flash[:notice] = 'Ingredient created and saved'
       redirect_to cocktail_path(@cocktail)
