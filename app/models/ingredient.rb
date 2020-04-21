@@ -5,16 +5,7 @@ class Ingredient < ApplicationRecord
   has_many :cocktails, through: :doses, dependent: :restrict_with_error
   validates :name, uniqueness: true, presence: true
   acts_as_taggable_on :tags
-
   def tag_label
     "#{name} (#{tag_list})"
   end
-
-  def xx
-    tags
-  end
-
-  # def group_by_tag
-  #   tag_list
-  # end
 end

@@ -12,6 +12,19 @@ class CocktailsController < ApplicationController
     @dose = Dose.new
     @ingredient = Ingredient.new
     @ingredients = Ingredient.all
+
+    #TODO: Manquee l'id dans mon custom group
+    
+    # @grouped = {}
+    # Ingredient.all.each do |ing|
+    #   ing.tag_list.each do |tag|
+    #     @grouped[tag] ||= []
+    #     @grouped[tag] << ing.name
+    #     # @grouped[tag] << ing.id
+    #   end
+    # end
+
+
   end
 
   def new

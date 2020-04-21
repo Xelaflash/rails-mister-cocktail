@@ -2,8 +2,8 @@
   <h4>Add ingredients & Dose</h4>
   <%= simple_form_for [cocktail, dose] do |f| %>
     <%= f.input :description, required: true, label: "Dose", placeholder: "2cl" %>
+    <%#= f.association :ingredient, collection: @grouped, as: :grouped_select, group_method: :last, group_label_method: :first, value_method: :ingredient_by_id, input_html: { class: "ingredients_select" }, prompt: 'Select the ingredient'%>
     <%= f.association :ingredient, input_html: { class: "ingredients_select" }, include_hidden: false, prompt: 'Select the ingredient', label_method: :tag_label, value_method: :id %>
-    <%#= f.association :ingredient, input_html: { class: "ingredients_select" }, prompt: 'Select the ingredient', as: :grouped_select, group_by: :name%>
     <%= f.button :submit, class: "btn btn-primary" %>
   <% end %>
 </div>
