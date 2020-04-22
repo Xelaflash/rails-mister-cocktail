@@ -12,26 +12,27 @@
       <div class="cocktail-description-card" id="ingredients-card">
         <h2>Ingredients</h2>
         <div class="card-sep"></div>
-        <div class="doses-show">
-          <ul class="ingredients-list">
-            <% @cocktail.doses.each do |dose| %>
-            <li><%= dose.description %> <strong>
-                <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient)%></strong>
-              <%= link_to "<i class='far fa-trash-alt'></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-delete' %>
-            </li>
-            <% end %>
-          </ul>
+        <div class="cocktail-card-content">
+          <% @cocktail.doses.each do |dose| %>
+            <p class="step">
+              <span class="dose-nbr"><%= dose.description %> </span>
+              <span class="dose-item"><%= dose.ingredient.name %></span>
+              <% if user_signed_in? && current_user.admin? %>
+                <%= link_to "<i class='far fa-trash-alt'></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-delete' %>
+              <% end %>
+            </p>
+          <% end %>
         </div>
       </div>
       <div class="cocktail-description-card" id="recipe-card">
         <h2>Recipe</h2>
         <div class="card-sep"></div>
-        <div class="recipe_steps">
+        <div class="cocktail-card-content">
           <% @cocktail.fix_string.each_with_index do |step, index| %>
-          <p class="step">
-            <span class="step-nbr">0<%= index + 1 %></span>
-            <span class="step-item"><%= step %></span>
-          </p>
+            <p class="step">
+              <span class="step-nbr">0<%= index + 1 %></span>
+              <span class="step-item"><%= step %></span>
+            </p>
           <% end %>
         </div>
       </div>
@@ -40,13 +41,13 @@
   <hr class="separator">
   <div class="ingredients-form">
     <% if user_signed_in? && current_user.admin? %>
-    <h3>Only for admin</h3>
-    <div class="col-sm-12 col-md-6">
-      <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
-    </div>
-    <div class="col-sm-12 col-md-6">
-      <%= render "ingredients/new", cocktail: @cocktail, ingredient: @ingredient %>
-    </div>
+      <h3>Only for admin</h3>
+      <div class="col-sm-12 col-md-6">
+        <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <%= render "ingredients/new", cocktail: @cocktail, ingredient: @ingredient %>
+      </div>
     <% end %>
   </div>
 </div>
