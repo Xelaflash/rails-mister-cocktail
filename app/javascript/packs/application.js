@@ -1,5 +1,4 @@
 import 'bootstrap';
-import 'jquery';
 
 import '../components/alert';
 import '../components/scroll_anim';
