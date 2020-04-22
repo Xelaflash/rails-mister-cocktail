@@ -7,6 +7,9 @@ class Cocktail < ApplicationRecord
   validates :name, uniqueness: true, presence: true
   validates :recipe, presence: true
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   has_one_attached :photo
 
   def fix_string

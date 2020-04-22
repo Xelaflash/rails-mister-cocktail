@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -17,5 +19,6 @@ module RailsMisterCocktail
     # the framework and any gems in your application.
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end

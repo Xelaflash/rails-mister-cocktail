@@ -32,6 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .cocktail-description {
@@ -42,6 +43,7 @@
 #ingredients-card {
   grid-row: 1 / span 4;
   grid-column: 1 / span 2;
+  margin: 40px 0 15px -70px;
 }
 
 #recipe-card {
@@ -61,10 +63,10 @@
 }
 
 .cocktail-description-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: $white;
   box-shadow: 12px 12px 16px 0 rgba(46, 64, 87, 0.4), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
-  padding: 60px 45px;
-  height: 400px;
+  padding: 40px;
+  min-height: 400px;
   width: 450px;
   margin: 20px;
   border-radius: 3px;
@@ -107,14 +109,13 @@
   color: $red;
   font-family: $header-font;
   float: left;
-  margin: 3px 10px 0px -40px;
+  margin: 5px 10px 0px -40px;
   letter-spacing: 0.05em;
   text-shadow: 2px 3px 1px rgba(46, 64, 87, 0.2);
 }
 
 .dose-nbr {
   color: $red;
-  margin: -1px 2px 0px -50px;
   letter-spacing: 0.02em;
   font-weight: 500;
   font-size: 20px;
@@ -132,5 +133,17 @@
 
 .card-delete {
   color: $red;
+}
 
+.ingredients-form {
+  margin: 40px auto;
+
+  h3 {
+    font-size: 42px;
+    color: $red;
+    font-family: $header-font;
+    text-align: center;
+    margin: 40px auto;
+    text-shadow: 2px 3px 1px rgba(46, 64, 87, 0.2);
+  }
 }

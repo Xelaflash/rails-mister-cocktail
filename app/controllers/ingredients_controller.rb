@@ -2,8 +2,9 @@
 
 class IngredientsController < ApplicationController
   def create
-    @cocktail = Cocktail.find(params[:cocktail_id])
+    @cocktail = Cocktail.friendly.find(params[:cocktail_id])
     @ingredient = Ingredient.new(ingredients_params)
+    @dose = Dose.new
     @ingredient.name = params[:ingredient][:name].capitalize
     if @ingredient.save
       flash[:notice] = 'Ingredient created and saved'
@@ -14,7 +15,7 @@ class IngredientsController < ApplicationController
   end
 
   def destroy
-    @cocktail = Cocktail.find(params[:cocktail_id])
+    @cocktail = Cocktail.friendly.find(params[:cocktail_id])
     @ingredient = Ingredient.find(params[:id])
     @ingredient.destroy
     redirect_to cocktail_path(@cocktail)

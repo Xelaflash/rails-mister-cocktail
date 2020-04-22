@@ -13,8 +13,7 @@ class CocktailsController < ApplicationController
     @ingredient = Ingredient.new
     @ingredients = Ingredient.all
 
-    #TODO: Manquee l'id dans mon custom group
-    
+    # TODO: Manquee l'id dans mon custom group
     # @grouped = {}
     # Ingredient.all.each do |ing|
     #   ing.tag_list.each do |tag|
@@ -23,8 +22,6 @@ class CocktailsController < ApplicationController
     #     # @grouped[tag] << ing.id
     #   end
     # end
-
-
   end
 
   def new
@@ -63,6 +60,6 @@ class CocktailsController < ApplicationController
   end
 
   def set_cocktail
-    @cocktail = Cocktail.find(params[:id])
+    @cocktail = Cocktail.friendly.find(params[:id])
   end
 end

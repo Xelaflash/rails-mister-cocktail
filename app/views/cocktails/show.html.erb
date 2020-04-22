@@ -38,15 +38,17 @@
       </div>
     </div>
   </div>
-  <hr class="separator">
-  <div class="ingredients-form">
-    <% if user_signed_in? && current_user.admin? %>
+  <% if user_signed_in? && current_user.admin? %>
+    <hr class="separator">
+    <div class="ingredients-form container">
       <h3>Only for admin</h3>
-      <div class="col-sm-12 col-md-6">
-        <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
-      </div>
-      <div class="col-sm-12 col-md-6">
-        <%= render "ingredients/new", cocktail: @cocktail, ingredient: @ingredient %>
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+        </div>
+        <div class="col-lg-6 mx-auto">
+          <%= render "ingredients/new", cocktail: @cocktail, ingredient: @ingredient %>
+        </div>
       </div>
     <% end %>
   </div>
