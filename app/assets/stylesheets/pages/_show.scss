@@ -28,19 +28,55 @@
   }
 }
 
+.cocktail-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cocktail-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#ingredients-card {
+  grid-row: 1 / span 4;
+  grid-column: 1 / span 2;
+}
+
+#recipe-card {
+  grid-row: 4 / span 4;
+  grid-column: 2 / span 2;
+  z-index: 3;
+}
+
+.separator {
+  border-top: 1px solid $charcoal;
+}
+
 .cocktail-picture img {
-  margin-top: 20px;
+  margin: 20px 0 0 100px;
   border-radius: 3px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(46, 64, 87, 0.3), 0 15px 12px rgba(46, 64, 87, 0.22);
 }
 
 .cocktail-description-card {
   background: rgba(255, 255, 255, 0.95);
+  box-shadow: 12px 12px 16px 0 rgba(46, 64, 87, 0.4), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
   padding: 60px 45px;
   height: 400px;
   width: 450px;
   margin: 20px;
   border-radius: 3px;
+
+  &:hover {
+    box-shadow: 7px 7px 5px 0px rgba(46, 64, 87, 0.2);
+    transform: translate(10px, 20px);
+    z-index: 50;
+    transition-delay: 0s;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 1);
+  }
 
   h2 {
     font-family: $header-font;
@@ -48,6 +84,7 @@
     text-shadow: 2px 3px 1px rgba(46, 64, 87, 0.2);
     margin-left: 25px;
   }
+
 }
 
 .card-sep {

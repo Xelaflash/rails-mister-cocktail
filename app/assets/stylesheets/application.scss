@@ -4,7 +4,7 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap/scss/bootstrap"; // picks it up in node_modules!
+@import "bootstrap/scss/bootstrap.scss"; // picks it up in node_modules!
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import 'select2/dist/css/select2';
