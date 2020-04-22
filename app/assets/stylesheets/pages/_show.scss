@@ -105,6 +105,10 @@
   width: fit-content;
 }
 
+.step {
+  max-width: 250px;
+}
+
 .step-nbr {
   color: $red;
   font-family: $header-font;
@@ -122,7 +126,7 @@
 }
 
 .step-item {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 

@@ -6,6 +6,7 @@
 .card {
   position: relative;
   width: 250px;
+  height: 350px;
   transition: all 250ms cubic-bezier(.02, .01, .47, 1);
   border-radius: 5px;
   border: none;
@@ -32,6 +33,10 @@
   background: $charcoal;
   text-align: center;
   text-transform: capitalize;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   h2 {
     margin: 20px auto;
