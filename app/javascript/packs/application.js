@@ -4,7 +4,7 @@ import '../components/alert';
 import '../components/scroll_anim';
 import { previewImageOnFileSelect } from '../components/photo_preview';
 import { improveDropdown } from '../components/init_select2';
-import { initStarRating } from '../plugins/init_star_rating';
+import { initStarRating } from '../components/init_star_rating';
 
 $(function() {
   setTimeout(function() {
