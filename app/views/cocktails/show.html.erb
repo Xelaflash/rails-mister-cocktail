@@ -38,6 +38,24 @@
       </div>
     </div>
   </div>
+  <div class="cocktail-rating">
+    <div class="container">
+      <h3>Enjoy this cocktail?</h3>
+      <div class="row">
+        <div class="col-xs-4">
+          <%= render "reviews/new", cocktail: @cocktail, review: @review %>
+        </div>
+      </div>
+      <ul class="">
+        <% @cocktail.reviews.each do |review| %>
+          <li class=""><%= review.rating %></li>
+          <% if user_signed_in? && current_user.admin? %>
+            <%= link_to "<i class='far fa-trash-alt'></i>".html_safe, review_path(review), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-delete' %>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
   <% if user_signed_in? && current_user.admin? %>
     <hr class="separator">
     <div class="ingredients-form container">

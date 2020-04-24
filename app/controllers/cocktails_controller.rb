@@ -11,7 +11,9 @@ class CocktailsController < ApplicationController
   def show
     @dose = Dose.new
     @ingredient = Ingredient.new
+    @review = Review.new
     @ingredients = Ingredient.all
+    @reviews = Review.all
 
     # TODO: Manquee l'id dans mon custom group
     # @grouped = {}
