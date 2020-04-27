@@ -4,6 +4,9 @@
     <div class="sep"></div>
     <h1><%= @cocktail.name %></h1>
   </div>
+  <div class="breadcrumbs back">
+    <%= render_breadcrumbs :separator => ' > ' %>
+  </div>
   <div class="cocktail-section container-fluid">
     <div class="cocktail-picture">
       <%= cl_image_tag @cocktail.photo.key, width: 400, crop: :fill %>
@@ -40,7 +43,7 @@
   </div>
   <div class="rating-section container">
     <div class="cocktail-rating-container">
-      <h4>Our community rated this cocktail:</h4>
+      <h4 id="rating-title">Our community rated this cocktail:</h4>
       <div class="cocktail-rating">
         <div class="stars-wrapper">
           <% if  @cocktail.reviews.present? %>
