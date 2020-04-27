@@ -1,4 +1,4 @@
 <%= simple_form_for([cocktail, review], html: { class: "review_form" }) do |f| %>
-  <%= f.input :rating, collection: 1..5 %>
+  <%= f.input :rating, collection: 1..5, label: "Let's Rate it" %>
   <%= f.button :submit, class: "d-none" %>
 <% end %>

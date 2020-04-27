@@ -16,4 +16,8 @@ class Cocktail < ApplicationRecord
   def fix_string
     self.recipe = recipe.gsub(/\r\n/, '').split('.').each(&:strip!)
   end
+
+  def average_rating
+    reviews.average(:rating)
+  end
 end
