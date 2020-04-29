@@ -92,6 +92,19 @@
   }
 }
 
+.dropdown {
+  padding-right: 10px;
+}
+
+.dropdown-menu {
+  transform: translate3d(-135px, 20px, 0px) !important;
+
+  &.show {
+    text-align: center;
+  }
+}
+
+
 @media (min-width: 768px) {
   .navbar-wagon {
     padding: 0px 30px;
