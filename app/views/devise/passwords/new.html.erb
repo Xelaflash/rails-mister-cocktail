@@ -1,9 +1,9 @@
 <div class="log-page new-pwd">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-md-10 mx-auto">
+      <div class="col-lg-6 col-md-10 mx-auto devise-form-centered">
         <div class="form-all">
-          <h2>Forgot your password ?</h2>
+          <h2>Forgot your password?</h2>
           <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
             <%= f.error_notification %>
             <div class="form-inputs col-lg-8 mx-auto">

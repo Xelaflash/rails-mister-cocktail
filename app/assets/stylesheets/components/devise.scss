@@ -1,5 +1,6 @@
 .log-page {
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 150px);
+  position: relative;
 }
 
 .log-page.register {
@@ -33,6 +34,14 @@
     font-weight: bold;
     text-align: center;
   }
+}
+
+
+.devise-form-centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #user_remember_me {
