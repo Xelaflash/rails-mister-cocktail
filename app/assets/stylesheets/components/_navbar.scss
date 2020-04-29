@@ -3,7 +3,7 @@
   z-index: 10000;
   background: white;
   height: 80px;
-  padding: 0px 30px;
+  padding: 0px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,6 +12,7 @@
   h1 {
     font-family: $main-title-font;
     margin: 0;
+    font-size: 2rem;
   }
 }
 
@@ -88,5 +89,15 @@
     color: white;
     background-position: right center;
     text-decoration: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-wagon {
+    padding: 0px 30px;
+
+    h1 {
+      font-size: 2.5rem;
+    }
   }
 }

@@ -1,10 +1,7 @@
 /* footer wagon */
 .footer_xela {
   background: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
+  min-height: 70px;
   padding: 10px 25px;
   color: rgba(0, 0, 0, 0.3);
   box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.2), 0 1px 0 0 rgba(0, 0, 0, 0.2);
@@ -13,6 +10,7 @@
 .footer-links {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .footer-links a {
@@ -33,6 +31,8 @@
 
 .footer-copyright {
   font-size: 15px;
+  margin: 15px auto;
+  text-align: center;
 }
 
 #portfolio-link {
@@ -41,6 +41,18 @@
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer_xela {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-copyright {
+    margin: 15px 0;
   }
 }
 
