@@ -12,3 +12,7 @@
 .ingredients {
   min-height: 80vh;
 }
+
+.select2 {
+  width: 100% !important; // line mandatory to fix select2 responsive issue
+}
