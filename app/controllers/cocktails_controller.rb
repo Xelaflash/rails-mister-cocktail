@@ -5,7 +5,7 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: %i[show edit update destroy]
 
   def index
-    @cocktails = policy_scope(Cocktail)
+    @cocktails = Cocktail.all
   end
 
   def show
@@ -18,13 +18,11 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
-    authorize @cocktail
   end
 
   def create
     @cocktail = Cocktail.new(cocktails_params)
     @cocktail.name = params[:cocktail][:name].capitalize
-    authorize @cocktail
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
@@ -55,6 +53,5 @@ class CocktailsController < ApplicationController
 
   def set_cocktail
     @cocktail = Cocktail.friendly.find(params[:id])
-    authorize @cocktail
   end
 end
