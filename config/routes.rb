@@ -14,4 +14,10 @@ Rails.application.routes.draw do
   resources :reviews, only: %i[destroy]
 
   root to: 'cocktails#index'
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :cocktails, only: %i[index show]
+    end
+  end
 end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class IngredientsController < ApplicationController
+  before_action :skip_authorization, only: %i[create destroy]
   def create
     @cocktail = Cocktail.friendly.find(params[:cocktail_id])
     @ingredient = Ingredient.new(ingredients_params)

@@ -1,8 +1,10 @@
 <div class="container cocktail-index">
   <% if user_signed_in? && current_user.admin? %>
-    <div class="create-cocktail-wrapper">
-      <%= link_to "Create a cocktail", new_cocktail_path, class: "gradient-button" %>
-    </div>
+    <% if policy(Cocktail).create? %>
+      <div class="create-cocktail-wrapper">
+        <%= link_to "Create a cocktail", new_cocktail_path, class: "gradient-button" %>
+      </div>
+    <% end %>
   <% end %>
   <div class="row">
     <% @cocktails.each do |cocktail| %>
