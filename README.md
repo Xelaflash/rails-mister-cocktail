@@ -17,3 +17,4 @@ Webpack
 Cloudinary
 Bootstrap
 Jquery
+Active Admin
