@@ -5,7 +5,7 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: %i[show edit update destroy]
 
   def index
-    @cocktails = Cocktail.all
+    @cocktails = policy_scope(Cocktail)
   end
 
   def show
@@ -14,25 +14,17 @@ class CocktailsController < ApplicationController
     @review = Review.new
     @ingredients = Ingredient.all
     @reviews = Review.all
-
-    # TODO: Manquee l'id dans mon custom group
-    # @grouped = {}
-    # Ingredient.all.each do |ing|
-    #   ing.tag_list.each do |tag|
-    #     @grouped[tag] ||= []
-    #     @grouped[tag] << ing.name
-    #     # @grouped[tag] << ing.id
-    #   end
-    # end
   end
 
   def new
     @cocktail = Cocktail.new
+    authorize @cocktail
   end
 
   def create
     @cocktail = Cocktail.new(cocktails_params)
     @cocktail.name = params[:cocktail][:name].capitalize
+    authorize @cocktail
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
@@ -63,5 +55,6 @@ class CocktailsController < ApplicationController
 
   def set_cocktail
     @cocktail = Cocktail.friendly.find(params[:id])
+    authorize @cocktail
   end
 end
