@@ -29,7 +29,6 @@ gem 'turbolinks', '~> 5'
 gem 'turbolinks_render'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', '~> 3.5'
-gem 'pundit'
 
 group :development, :test do
   gem 'pry-byebug'
