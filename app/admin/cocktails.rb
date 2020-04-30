@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 ActiveAdmin.register Cocktail do
+  controller do
+    def find_resource
+      scoped_collection.friendly.find(params[:id])
+    end
+  end
   permit_params :name, :recipe, :photo
   index do
     selectable_column
