@@ -55,7 +55,11 @@
             <% end %>
           </div>
           <div id="rating-txt">
-            <span>(<%= @cocktail.reviews.count %> reviews)</span>
+            <% if @cocktail.reviews.count == 1 %>
+              <span>(<%= @cocktail.reviews.count %> review)</span>
+            <% else %>
+              <span>(<%= @cocktail.reviews.count %> reviews)</span>
+            <% end %>
           </div>
         <% else %>
           <p>No review yet. Be the first to rate</p>

@@ -1,18 +1,19 @@
 # frozen_string_literal: true
 
 class CocktailPolicy < ApplicationPolicy
-  class Scope < Scope
-    def resolve
-      scope.all
-    end
+  attr_reader :user, :record
+
+  def initialize(user, post)
+    @user = user
+    @post = post
   end
 
   def show?
-    true  # Anyone can view a restaurant
+    true # Anyone can view a restaurant
   end
 
   def create?
-    true  # Anyone can create a restaurant
+    true
   end
 
   def update?

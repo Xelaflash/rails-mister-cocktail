@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ReviewsController < ApplicationController
+  before_action :skip_authorization
   def new
     @cocktail = Cocktail.friendly.find(params[:cocktail_id])
     @review = Review.new
