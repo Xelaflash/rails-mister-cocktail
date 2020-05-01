@@ -9,7 +9,7 @@ class DosesController < ApplicationController
     @dose.cocktail = @cocktail
     if @dose.save
       flash[:notice] = 'Dose created'
-      redirect_to cocktail_path(@cocktail, anchor: 'ingredients-card')
+      redirect_to cocktail_path(@cocktail, anchor: 'new_dose')
     else
       flash.now[:alert] = 'Problem please retry'
       render 'cocktails/show'
