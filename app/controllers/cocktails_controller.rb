@@ -24,8 +24,10 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(cocktails_params)
     @cocktail.name = params[:cocktail][:name].capitalize
     if @cocktail.save
+      flash[:notice] = 'Cocktail successfully created'
       redirect_to cocktail_path(@cocktail)
     else
+      flash.now[:alert] = 'Problem when creating cocktail'
       render :new
     end
   end

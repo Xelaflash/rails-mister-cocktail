@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
 class ReviewsController < ApplicationController
-  def new
-    @cocktail = Cocktail.friendly.find(params[:cocktail_id])
-    @review = Review.new
-  end
-
   def create
     @cocktail = Cocktail.friendly.find(params[:cocktail_id])
     @review = current_user.reviews.new(review_params)

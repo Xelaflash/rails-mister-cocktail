@@ -4,10 +4,14 @@ class DosesController < ApplicationController
   def create
     @cocktail = Cocktail.friendly.find(params[:cocktail_id])
     @dose = Dose.new(dose_params)
+    @review = Review.new
+    @ingredient = Ingredient.new
     @dose.cocktail = @cocktail
     if @dose.save
+      flash[:notice] = 'Dose created'
       redirect_to cocktail_path(@cocktail)
     else
+      flash.now[:alert] = 'Problem please retry'
       render 'cocktails/show'
     end
   end

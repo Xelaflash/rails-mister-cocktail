@@ -5,11 +5,13 @@ class IngredientsController < ApplicationController
     @cocktail = Cocktail.friendly.find(params[:cocktail_id])
     @ingredient = Ingredient.new(ingredients_params)
     @dose = Dose.new
+    @review = Review.new
     @ingredient.name = params[:ingredient][:name].capitalize
     if @ingredient.save
       flash[:notice] = 'Ingredient created and saved'
       redirect_to cocktail_path(@cocktail)
     else
+      flash.now[:alert] = 'Problem please retry'
       render 'cocktails/show'
     end
   end
