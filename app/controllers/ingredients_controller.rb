@@ -9,7 +9,7 @@ class IngredientsController < ApplicationController
     @ingredient.name = params[:ingredient][:name].capitalize
     if @ingredient.save
       flash[:notice] = 'Ingredient created and saved'
-      redirect_to cocktail_path(@cocktail)
+      redirect_to cocktail_path(@cocktail, anchor: 'new_ingredient')
     else
       flash.now[:alert] = 'Problem please retry'
       render 'cocktails/show'

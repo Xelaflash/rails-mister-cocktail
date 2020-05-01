@@ -1,6 +1,6 @@
 <div class="form-all">
   <h4>Add ingredients & Dose</h4>
-  <%= simple_form_for [cocktail, dose] do |f| %>
+  <%= simple_form_for([cocktail, dose], remote: true) do |f| %>
     <%= f.error_notification %>
     <%= f.input :description, required: true, label: "Dose", placeholder: "2cl" %>
     <%= f.association :ingredient, input_html: { class: "ingredients_select" }, include_hidden: false, prompt: 'Select the ingredient', label_method: :tag_label, value_method: :id %>

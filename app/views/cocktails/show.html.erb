@@ -18,7 +18,7 @@
               <span class="dose-nbr"><%= dose.description %> </span>
               <span class="dose-item"><%= dose.ingredient.name %></span>
               <% if user_signed_in? && current_user.admin? %>
-                <%= link_to "<i class='far fa-trash-alt'></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-delete' %>
+                <%= link_to "<i class='far fa-trash-alt'></i>".html_safe, dose_path(dose), method: :delete, remote: true, anchor: 'ingredients-card', data: { confirm: "Are you sure?" }, class: 'card-delete' %>
               <% end %>
             </p>
           <% end %>

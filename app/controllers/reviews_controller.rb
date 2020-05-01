@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     @ingredient = Ingredient.new
     if @review.save
       flash[:success] = 'Review successfully created'
-      redirect_to cocktail_path(@cocktail)
+      redirect_to cocktail_path(@cocktail, anchor: 'cocktail-rating-container')
     else
       flash[:alert] = 'Something went wrong'
       render 'cocktails/show'
