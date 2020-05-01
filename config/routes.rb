@@ -17,7 +17,9 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :cocktails, only: %i[index show]
+      resources :cocktails, only: %i[index show] do
+        get :photo, on: :member
+      end
     end
   end
 end
