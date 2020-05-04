@@ -1,0 +1,5 @@
+meta_product_name: "Fancy Cocktails"
+meta_title: "Fancy Cocktails - Your Daily Cocktail"
+meta_description: "Find and enjoy the best cocktails recipes"
+meta_image: "logo.png" # should exist in `app/assets/images/`
+twitter_account: "@fancy_cocktails" # required for Twitter Cards
