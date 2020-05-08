@@ -10,7 +10,7 @@ class Api::V1::CocktailsController < Api::V1::BaseController
 
   def photo
     if @cocktail.photo.attached?
-      redirect_to rails_blob_url(@cocktail.photo)
+      redirect_to rails_blob_path(@cocktail.photo)
     else
       head :not_found
     end
