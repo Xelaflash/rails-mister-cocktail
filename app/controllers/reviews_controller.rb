@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 class ReviewsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[create]
   def create
     @cocktail = Cocktail.friendly.find(params[:cocktail_id])
-    @review = current_user.reviews.new(review_params)
+    @review = Review.new(review_params)
     @review.cocktail = @cocktail
     @dose = Dose.new
     @ingredient = Ingredient.new

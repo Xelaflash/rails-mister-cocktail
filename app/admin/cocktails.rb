@@ -20,6 +20,7 @@ ActiveAdmin.register Cocktail do
       row :id
       row :name
       row :recipe
+      row :reviews
       row :photo do |cocktail|
         image_tag url_for(cocktail.photo), width: 150
       end
