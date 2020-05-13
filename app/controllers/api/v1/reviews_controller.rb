@@ -6,7 +6,7 @@ class Api::V1::ReviewsController < Api::V1::BaseController
     @review = Review.new(review_params)
     @review.cocktail = @cocktail
     if @review.save
-      render 'cocktails/show'
+      head :no_content
     else
       render_error
     end
