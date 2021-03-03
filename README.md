@@ -4,7 +4,7 @@ Site coded with rails during le wagon bootcamp (feb18) and deployed on heroku.
 
 change this website to be an cocktail APi for my DayliCocktail Chrome extension
 
-https://fancy-cocktail.herokuapp.com/
+https://fancy-cocktails2.herokuapp.com
 
 ## Stack
 
